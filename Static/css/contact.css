@@ -1,0 +1,496 @@
+@import url("header.css");
+@import url("global.css");
+
+
+
+/* SECTION 🌐 Configuration globale */
+:root {
+    --primary-blue: #2118d1;
+    --accent-red: #F60502;
+    --light-bg: #F5FDF5;
+    --text-dark: #222222;
+    --text-light: #ffffff;
+    --black: #000000;
+}
+
+/*  🖋 Réinitialisation des marges et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--text-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* 🏷️ Typographie */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: var(--primary-blue);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 18px;
+    color: var(--secondary-blue);
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+h4 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+p {
+    font-size: .9rem;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+/* 📎 Liens */
+a {
+    text-decoration: none;
+    color: var(--primary-blue);
+    font-weight: 600;
+    font-size: .9rem;
+}
+
+a:hover {
+    color: var(--accent-red);
+    text-decoration: underline;
+}
+
+/* 📜 Listes */
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    font-size: .9rem;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+
+/* 🎨 Boutons */
+.btn {
+    display: inline-block;
+    background: var(--primary-blue);
+    color: var(--text-light);
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: var(--accent-red);
+    color: var(--text-light);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    h1 { font-size: 36px; }
+    h2 { font-size: 28px; }
+    h3 { font-size: 24px; }
+    p, ul li { font-size: 16px; }
+}
+
+
+
+
+/* Bannière */
+.hero-contact {
+    background: url('../img/contact/c1.jpg') no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--text-light);
+    position: relative;
+}
+
+.hero-contact .overlay {
+    background: rgba(255, 255, 255, 0.6);
+    width: 100%;
+    padding: 50px 20px;
+}
+
+/* SECTION Coordonnées */
+.contact-info {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    color: var(--black);
+    text-align: center;
+}
+
+.container-info .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrer le contenu */
+}
+
+.contact-info h2 {
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.contact-info p {
+    color: var(--text-dark);
+    margin-bottom: 40px;
+    line-height: 1.7;
+    max-width: 900px; /* Limiter la largeur du texte pour plus de lisibilité */
+    margin-left: auto;
+    margin-right: auto; /* Centrer le paragraphe */
+}
+
+.contact-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Grille avec colonnes de taille égale */
+    gap: 30px;
+    justify-items: center; /* Centrer les éléments de la grille */
+    align-items: stretch; /* Assurer que les éléments prennent toute la hauteur disponible */
+    margin-top: 40px; /* Espacement au-dessus de la grille */
+    align-items: center;
+}
+
+.contact-item {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Ombre plus marquée */
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    max-width: 320px; /* Limiter la largeur des éléments */
+    width: 100%; /* Assurer que les éléments prennent toute la largeur disponible */
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact-item h3 {
+    font-weight: 600;
+    color: var(--primary-blue);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.contact-item p {
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.contact-item a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-item img {
+    width: auto;
+    height: 5vh;
+    margin-bottom: 20px;
+}
+
+.contact-item:hover {
+    transform: translateY(-8px); /* Déplacement plus visible à l'hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus forte à l'hover */
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+    font-weight: 700; /* Accentuer le texte au survol */
+}
+
+
+
+/*SECTION Formulaire */
+.contact-form {
+    background: rgba(255, 255, 255, 0.6);
+    /* background-color: var(--light-bg); */
+    padding: 10px 20px;
+    color: var(--black);
+    /* text-align: center; */
+}
+
+.contact-form .container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.contact-form h3 {
+    color: var(--primary-blue);
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.contact-form p {
+    color: var(--black);
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.contact-form form {
+    display: grid;
+    grid-template-columns:  repeat(auto-fit, minmax(300px, 1fr)) !important;
+   /* gap: 50px; */
+    align-items: center;
+ 
+}
+
+.contact-form .right{
+    /* box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1); */
+   margin-right: 0;
+    max-width: 500px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: auto;
+    /* max-height: 100%; */
+border-radius: 6px;
+    
+}
+
+/* .contact-form label {
+    text-align: center;
+    font-weight: 200;
+    color: var(--text-dark);
+} */
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    color: var(--black);
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary-blue);
+    outline: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    font-style: italic;
+    color: #bdc3c7;
+}
+
+.contact-form button {
+    background-color: var(--accent-red);
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    /* align-items: center; */
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.contact-form .bouton {
+ text-align: center;
+}
+
+/* .icon {
+    position: absolute;
+   margin-top: 10px;
+} */
+
+.contact-form button:hover {
+    background-color: var(--primary-blue);
+}
+
+.contact-form button:active {
+    transform: translateY(2px);
+}
+
+
+/* SECTION FAQ */
+.faq {
+    padding: 60px 20px;
+    background: var(--light-bg);
+    color: var(--black);
+    text-align: center;
+}
+
+.faq h2 {
+    font-size: 2rem;
+    color: var(--primary-blue);
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.faq-question {
+    font-size: 1.2rem;
+    color: var(--accent-red);
+    font-weight: 600;
+    cursor: pointer;
+    text-align: left;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.faq-answer {
+    font-size: 1rem;
+    color: #7f8c8d;
+    line-height: 1.6;
+    display: none; /* Initially hide the answers */
+    margin-top: 10px;
+    text-align: left;
+}
+
+.faq-question:hover {
+    color: var(--primary-blue);
+}
+
+.faq-item.active .faq-answer {
+    display: block; /* Show the answer when active */
+}
+
+.faq-item.active .faq-question::after {
+    content: " ▼"; /* Change the icon to down arrow */
+}
+
+.faq-item .faq-question::after {
+    content: " ►"; /* Add a right arrow icon initially */
+    font-size: 0.9rem;
+    padding-left: 10px;
+}
+
+.faq-item.active .faq-question::after {
+    transform: rotate(90deg); /* Rotate the arrow */
+    transition: transform 0.3s ease;
+}
+
+
+/*SECTION MAP*/
+/*SECTION MAP*/
+.map {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.map iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+    border-radius: 8px;
+}
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+table{
+    /* position: relative; */
+    /* z-index: 2; */
+    /* left: 50%; */
+    /* top: 50%; */
+    /* transform: translate(-50%,-50%); */
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    /* box-shadow: 0 2px 15px rgba(64,64,64,.7); */
+    /* border-radius: 20px; */
+    /* overflow: hidden; */
+   /* text-align: center;
+   align-items: center; */
+
+   
+   }
+   td , th{
+    /* padding: 5px 5px; */
+    text-align: center;
+    
+   
+   }
+   th{
+    /* background-color: #2118d1; */
+    color: #2118d1;
+    /* font-family: 'Open Sans',Sans-serif; */
+    /* font-weight: 200; */
+    /* text-transform: uppercase; */
+   
+   }
+   tr{
+    width: 100%;
+    background-color: #fafafa;
+    font-family: 'Montserrat', sans-serif;
+   }
+   tr:nth-child(even){
+    background-color: #eeeeee;
+   }
+
+   .flex{
+    display:flex;
+    flex-direction: row;
+
+    gap: 20px;
+   }
+
+   @media screen and (max-width: 768px) {
+    .hero-contact {
+        height: 60vh; 
+        font-size: 1.2rem;
+        width: 100%;
+        /* top: 50px; */
+    }
+
+    .hero-contact .overlay {
+        padding: 15px; /* Moins de padding sur les petits écrans */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-contact {
+        height: 50vh; /* Encore plus petit sur les très petits écrans */
+        font-size: 1rem; /* Taille de texte encore réduite pour s'adapter à l'écran */
+    }
+    .hero-contact.overlay {
+        padding: 10px; /* Moins de padding pour les très petits écrans */
+    }
+}
