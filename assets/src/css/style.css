@@ -1,0 +1,58 @@
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.float-animation {
+    animation: float 4s ease-in-out infinite;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+
+
+
+
+/* cursor */
+
+
+.cursor-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+}
+
+.cursor-dot.red {
+    background-color: #ef4444;
+    width: 12px;
+    height: 12px;
+    transition: transform 0.1s ease;
+}
+
+.cursor-dot.blue {
+    background-color: #3b82f6;
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.group:hover .cursor-dot.blue {
+    width: 40px;
+    height: 40px;
+}

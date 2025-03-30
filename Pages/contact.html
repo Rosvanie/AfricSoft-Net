@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Afric Soft Net</title>
+    <link rel="stylesheet" href="../Static/css/contact.css">
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="../Static/img/logo.png">
+
+    
+</head>
+<body>
+
+    <!-- En-tête -->
+
+    <header class="header">
+        <div class="container">
+          <!-- Logo -->
+          <div class="logo">
+            <img src="../Static/img/logo.png" alt="Afric Soft Net">
+          </div>
+      
+          <!-- Menu Hamburger -->
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+      
+          <!-- Menu de navigation -->
+          <nav class="navbar">
+            <a href="../index.html">Accueil</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">À propos</a>
+            <a href="contact.html" class="btn-contact-mobile button">Nous Contacter</a>
+          </nav>
+      
+          <!-- Bouton Contact -->
+          <a href="contact.html" class="btn-contact button">Nous Contacter</a>
+        </div>
+    </header>
+
+    <!-- Bannière -->
+    <section class="hero-contact">
+        <div class="overlay">
+            <h1>Contactez-nous</h1>
+            <p>Nous sommes disponibles pour répondre à toutes vos questions.</p>
+        </div>
+    </section>
+
+    <!-- Coordonnées -->
+    <section class="contact-info">
+        <div class="container">
+            <h2>Nos Coordonnées</h2>
+            <p>Vous pouvez nous contacter via les moyens suivants :</p>
+            <div class="contact-details">
+                <div class="contact-item card">
+                    <div><img src="../Static/img/contact/l1.png" alt="Adresse" class="one"></div>
+                    <p><span>Adresse Brazzaville :</span> Ex télévision Bacongo / <span>Adresse pointe -Noire : </span>Avenue Jacques opangault en face du lycée technique poaty Bernard</p>
+                </div>
+                <div class="contact-item card">
+                    <div><img src="../Static/img/contact/l2.png" alt=""></div>
+                    <p>+242 06 820 2822</p>
+                </div>
+                <div class="contact-item card">
+                    <div><img src="../Static/img/contact/l3.png" alt=""></div>
+                    <p><a href="mailto:contact@africsoftnet.com">contact@africsoftnet.com</a></p>
+                </div>
+                <div class="contact-item card">
+                  
+                        <table class="">
+                            <thead>
+                                <tr>
+                                    <th>Jours</th>
+                                    <th>Heures</th>
+                                  
+                                </tr>
+                                
+                            </thead>
+                         
+                                <tr>
+                                    <td>Lundi-Vendredi</td>
+                                    <td>8h-17h</td>
+                                   
+                                </tr>
+                                <tr>
+                                    <td>Samedi</td>
+                                    <td>9h-13h</td>
+                                  
+                                </tr>
+                              
+                            
+                        </table>
+                   
+                    <!-- <p>Lundi - Vendredi : 8h - 18h<br>Samedi : 9h - 13h</p> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Formulaire de Contact -->
+    <section class="contact-form section">
+        <div class="container">
+            <!-- Formulaire modifié pour EmailJS -->
+            <form id="contact-form">
+                <div>
+                    <img src="../Static/img/contact.svg" alt="Contact">
+                </div>
+    
+                <div class="right">
+                    <h3>Contactez-nous</h3>
+                    
+                    <div class="flex">
+                        <div class="">
+                            <div class="">
+                                <label for="name">Nom:</label>
+                                <input name="name" id="name" type="text" placeholder="Votre nom" required>
+                            </div>
+                        </div>
+    
+                        <div class="">
+                            <div class="">
+                                <label for="email">Email:</label>
+                                <input name="email" id="email" type="email" placeholder="votre@email.com" required>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="">
+                        <div class="">
+                            <label for="subject">Sujet:</label>
+                            <input name="subject" id="subject" placeholder="Objet du message" required>
+                        </div>
+                    </div>
+    
+                    <div class="">
+                        <div class="">
+                            <label for="message">Message:</label>
+                            <textarea name="message" id="message" placeholder="Votre message..." required></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="bouton">
+                        <button type="submit" id="submit-btn">Envoyer le message</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- FAQ -->
+    <section class="map">
+        <h2>Notre emplacement</h2>
+        <div class="map-container">
+            <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1713654.6077365535!2d12.46344055032058!3d-4.25883259995698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a27b80f92c5a519%3A0xa8f7b960fe6f302d!2sCongo-Brazzaville!5e0!3m2!1sen!2sfr!4v1677622358941!5m2!1sen!2sfr" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+        
+        
+            <p class="error-message">La carte ne se charge pas ? Essayez d'activer JavaScript ou de recharger la page.</p>
+        </div>
+    </section>
+    
+    
+
+    <!-- Footer -->
+
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>À propos</h4>
+                <p>Afric Soft Net fournit des solutions IT sur mesure pour améliorer la performance de votre entreprise. Nous combinons expertise locale et technologie de pointe pour répondre à vos besoins.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Liens utiles</h4>
+                <ul>
+                    <li><a href="../index.html"></a></li>
+                    <li><a href="services.html">Nos services</a></li>
+                    <li><a href="about.html">A propos de nous</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p><strong>Email:</strong> contact@africsoftnet.com</p>
+                <p><strong>Téléphone:</strong> +242 06 123 45 67</p>
+                <p><strong>Adresse:</strong> 123 Avenue des Technologie, Brazzaville, Congo</p>
+            </div>
+            <div class="footer-section">
+                <h4>Suivez-nous</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/people/AfricSoft-Net/100063689632821/" target="_blank" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/africsoft-net" target="_blank" class="social-icon"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://wa.me/242069090995" target="_blank" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Afric Soft Net - Tous droits réservés</p>
+        </div>
+      </footer>
+
+    <script src="../Static/js/script.js"></script>
+    <script src="../Static/js/feather.min.js"></script>
+    <script src="../Static/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="../Static/js/animations.js"></script>
+</body>
+</html>
