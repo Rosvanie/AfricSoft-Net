@@ -1,0 +1,119 @@
+@import url("header.css");
+@import url("animations.css");
+@import url("global.css");
+
+
+.realisations-hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../img/realisations/r1.jpg') center/cover no-repeat;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+
+  
+  .hero-content p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--text-light);
+  }
+  
+.hero-content h2{
+  color: var(--text-light);
+  margin-top: 4rem;
+}
+
+
+
+
+
+  /*SECTION */
+  .realisations-grid {
+    background-color: var(--text-light);
+    padding: 100px 30px;
+  }
+  
+  .realisations-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 50px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .realisation-card {
+    background: linear-gradient(145deg, #1a1a1a, #121212);
+    border: 1px solid #2a2a2a;
+    border-radius: 20px;
+    overflow: hidden;
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  .realisation-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(255, 107, 53, 0.2);
+  }
+  
+  .realisation-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .realisation-card .client-logo {
+    width: 80px;
+    height: auto;
+    margin: -40px auto 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 10px;
+    position: relative;
+    top: -40px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+  }
+  
+  .realisation-card:hover .client-logo {
+    filter: grayscale(0%);
+  }
+  
+  .realisation-card h3 {
+    font-size: 1.1rem;
+    margin: 20px 20px 10px;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .realisation-card p {
+    font-size: 0.95rem;
+    color: #bbb;
+    line-height: 1.6;
+    padding: 0 20px 30px;
+    text-align: center;
+  }
+  
+  @media (max-width: 600px) {
+    .realisation-card h3 {
+      font-size: 1rem;
+    }
+  
+    .realisation-card p {
+      font-size: 0.9rem;
+    }
+  }
+  
+
+  /*SECTION - CLIENTS*/
+
+  .clients-logos{
+    margin-top: 30px;
+  }
